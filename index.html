@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#111111">
+<meta name="theme-color" content="#102d3b">
 <title>Do'kon hisobi</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -371,13 +371,406 @@ html[data-theme=light]{color-scheme:light}
 .thr{display:flex;justify-content:flex-end;margin:0 0 10px}
 .thb{display:inline-grid;place-items:center;width:46px;height:46px;padding:0;border:1.5px solid var(--ln2);border-radius:999px;background:var(--c);color:var(--ink);font:700 13.5px var(--fb);cursor:pointer}
 .thb:active{transform:scale(.96)}
+
+/* 2026 interface refresh — shared light/dark design tokens */
+:root,html[data-theme=light]{--bg:#f3f6f8;--c:#fff;--ink:#192d3a;--mut:#73828c;--ln:#e7edf0;--ln2:#d6e0e5;--pri:#087f72;--onp:#fff;--alt:#173c4b;--sa:#087f72;--sai:#fff;--r:#d25555;--gt:#087f72;--y:#a77521;--tr:#f1f5f7;--bar:#d6eae6;--p1:#eaf3fa;--p2:#e6f5ef;--p3:#fff4df;--p4:#fceced;--p5:#edf0f8;--sh:0 3px 16px -9px #23435620;--fd:"Plus Jakarta Sans",system-ui,sans-serif;--fb:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;color-scheme:light}
+@media(prefers-color-scheme:dark){html:not([data-theme=light]){--bg:#0c1820;--c:#14252e;--ink:#e7f1f5;--mut:#94aab6;--ln:#253943;--ln2:#36505c;--pri:#67d5bd;--onp:#102d28;--alt:#245065;--sa:#67d5bd;--sai:#102d28;--r:#f49494;--gt:#67d5bd;--y:#edc276;--tr:#1c303b;--bar:#2a514f;--p1:#203949;--p2:#203f37;--p3:#413720;--p4:#452c33;--p5:#2c334b;--sh:none;color-scheme:dark}}
+html[data-theme=dark]{--bg:#0c1820;--c:#14252e;--ink:#e7f1f5;--mut:#94aab6;--ln:#253943;--ln2:#36505c;--pri:#67d5bd;--onp:#102d28;--alt:#245065;--sa:#67d5bd;--sai:#102d28;--r:#f49494;--gt:#67d5bd;--y:#edc276;--tr:#1c303b;--bar:#2a514f;--p1:#203949;--p2:#203f37;--p3:#413720;--p4:#452c33;--p5:#2c334b;--sh:none;color-scheme:dark}
+body{background:var(--bg);font-size:14px;line-height:1.6}h2{font-size:26px;letter-spacing:-1px}h3{font-size:16px;letter-spacing:-.4px}
+main{padding:calc(env(safe-area-inset-top,0px) + 20px) 20px 120px;max-width:1140px}
+.appbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;gap:12px}.appbrand{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:800;letter-spacing:-.3px}.brandmark{display:grid;place-items:center;width:36px;height:36px;border-radius:12px;background:var(--pri);color:var(--onp)}.appbrand small{font-size:10px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase}.thr{margin:0}.thb{width:38px;height:38px;border:1px solid var(--ln);border-radius:12px}.top{margin-bottom:22px}.eyebrow{display:block;color:var(--mut);font-size:11px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:6px}.top h2{font-size:27px;line-height:1.25;letter-spacing:-1.1px}.top .sub{border:0;padding:0;background:none;font-size:12px;font-weight:500;color:var(--mut);margin-top:6px}
+.qa{gap:10px;margin-bottom:20px}.qa button,.qa button:nth-child(n){--k:var(--c);border:1px solid var(--ln);border-radius:18px;min-height:87px;font-size:11px;gap:8px;padding:13px 4px;color:var(--ink);box-shadow:none}.qa svg{width:27px;height:27px;padding:0;color:var(--pri)}.qa button:nth-child(1){--k:var(--pri);border-color:var(--pri);color:var(--onp)}.qa button:nth-child(1) svg{color:inherit}.qa button:nth-child(3) svg{color:var(--r)}
+.sg{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:20px}.st{padding:16px;border:1px solid var(--ln);border-radius:18px;box-shadow:none;position:relative}.sg .st:nth-child(n):not(.hero){--k:var(--c)}.st span{font-size:11px;font-weight:600;line-height:1.5;color:var(--mut);margin-bottom:10px}.st b{font-size:clamp(15px,4.4vw,22px);letter-spacing:-.6px;white-space:normal;overflow-wrap:anywhere;line-height:1.25}.st:not(.hero) b em{font-size:10px;color:var(--mut);margin-top:5px;font-weight:500}.st.hero{grid-column:1/-1;order:-1;padding:24px;border-radius:22px;background:linear-gradient(115deg,#163c4b,#145955);border-color:transparent;box-shadow:0 12px 24px -18px #174f56;isolation:isolate}.st.hero span{font-size:12px;color:#bcd9d9;letter-spacing:.2px;margin-bottom:16px}.st.hero b,.st.hero .in{font-size:clamp(28px,7.4vw,38px);font-weight:800;color:#fff;letter-spacing:-1.2px}.st.hero b em{font-size:13px;font-weight:500;opacity:.7;letter-spacing:0}.st.hero::after{width:190px;height:190px;right:-50px;top:-50px;background:none;border:30px solid #ffffff06;z-index:-1}.st.hero::before{width:120px;height:120px;right:15px;bottom:-70px;top:auto;background:none;border:1px solid #ffffff20;opacity:1;z-index:-1}.sg .st:last-child:not(.hero){grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:12px}.sg .st:last-child:not(.hero) span{margin:0}.sg .st:last-child:not(.hero) b{text-align:right;font-size:19px}.sg .st:last-child:not(.hero) b em{display:inline;margin-left:4px}
+.box{padding:20px;border-radius:20px;border:1px solid var(--ln);box-shadow:var(--sh);margin-bottom:16px}.box>.hd h3,.box>h3{font-size:15px}.bars{height:145px;gap:13px;padding-top:10px}.bc i{border-radius:6px 6px 4px 4px;background:var(--bar);max-width:42px;margin:auto auto 0;min-height:5px}.bar:last-child .bc i{background:var(--pri)}.bar small{font-size:10px;font-weight:500}.em{font-size:12px;font-weight:500;background:var(--tr);border-radius:12px;padding:20px 12px;color:var(--mut)}
+.b1,.b2{min-height:46px;border-radius:12px;padding:10px 17px;font-size:13px;font-weight:700}.b1{background:var(--pri);color:var(--onp);box-shadow:none}.b2{border:1px solid var(--ln2)}.b1.alt{background:var(--alt);color:#fff}.b3{border-radius:10px;min-height:38px;font-size:12px;font-weight:600}.hd{margin-bottom:18px}.sub{font-size:13px;line-height:1.7}.av,.dall .av{background:var(--p2);color:var(--gt);border-radius:12px;width:40px;height:40px;font-size:15px}.rw{padding:15px 0}.rw,.dr,.pi{font-size:13px}.nm{font-weight:600}.nm small{font-size:11px}.qc{font-size:11px;padding:6px 10px;background:var(--p2);color:var(--gt)}
+.seg{background:var(--tr);padding:4px;box-shadow:none;border:1px solid var(--ln);border-radius:13px;gap:3px}.seg .b3{font-size:12px;font-weight:600;min-height:40px;border-radius:9px}.seg .b3.on{background:var(--c);color:var(--pri);box-shadow:0 2px 5px #00000009}.seg.sm{margin:12px 0}.lb,dialog label{font-size:12px;font-weight:600;color:var(--mut)}input,select{min-height:50px;border:1px solid var(--ln2);border-radius:12px;background-color:var(--tr);font-weight:500}input::placeholder{color:var(--mut);font-size:13px}input:focus,select:focus{border-color:var(--pri);box-shadow:0 0 0 3px color-mix(in srgb,var(--pri) 10%,transparent)}.tot{border-radius:14px;padding:18px;background:var(--tr)}.tot b{font-size:25px}.b1[data-a=dsave]{border-radius:12px;min-height:52px;font-size:14px}.stp{border-radius:10px}.bigtile{border-radius:18px;padding:18px;background:var(--c)}.bigtile b{font-size:15px}.bigtile i{background:var(--p2);color:var(--pri)}.cbar{border-radius:16px;background:var(--pri);color:var(--onp);bottom:calc(84px + env(safe-area-inset-bottom,0px));padding:14px 18px;box-shadow:0 6px 24px #123b3b25}.cbar b{font-size:15px}
+nav.b{left:0;right:0;bottom:0;border-radius:22px 22px 0 0;border:1px solid var(--ln);border-bottom:0;padding:8px 8px calc(8px + env(safe-area-inset-bottom,0px));background:color-mix(in srgb,var(--c) 96%,transparent);backdrop-filter:blur(18px);box-shadow:0 -6px 30px #1b394509;gap:1px}nav.b button{color:var(--mut);border-radius:12px;min-height:52px;font-size:8px;font-weight:600;gap:5px;padding:7px 0}nav.b button svg{width:21px;height:21px}nav.b button.on{background:var(--p2);color:var(--pri)}nav.b button.on svg{color:var(--pri)}
+aside{width:235px;background:#102d3b;color:#fff;padding:30px 16px;gap:7px;border-right:1px solid #ffffff09}.br{padding:0 8px 36px;font-size:15px;letter-spacing:-.5px}.br small{color:#7fa0af;font-size:11px;letter-spacing:.3px}.lg{width:40px;height:40px;border-radius:13px;background:#35baa1;color:#102d3b;font-size:22px}aside button{color:#9ab2bd;font-size:12px;font-weight:600;border-radius:12px;padding:13px 15px}aside button.on{background:#204552;color:#91ead7}aside button.on svg{color:#69d4ba}aside::after{content:"DO‘KON HISOBI / 2026";margin-top:auto;padding:22px 12px 0;border-top:1px solid #ffffff12;color:#658696;font-size:9px;letter-spacing:1.4px}
+dialog{border:1px solid var(--ln);border-radius:22px;padding:24px;box-shadow:0 24px 80px #071e3940}dialog h3{font-size:21px}dialog::backdrop{background:#061c2b70;backdrop-filter:blur(6px)}#ts{background:#173c4b;border-radius:12px;font-size:12px;bottom:calc(90px + env(safe-area-inset-bottom,0px))}.wel{background:radial-gradient(ellipse at 100% 0,#1c655a88,transparent 65%),#102d3b;gap:20px}.mk{background:#55cdb2;color:#102d3b;border-radius:20px}.wel h1{font-size:44px;letter-spacing:-2px;line-height:1.15}.wel p{color:#a8c5ce;font-size:15px}.wel li{color:#d0e1e5;font-size:13px}.wel li::before{background:#234b55;color:#79dcc5}.wel .b1{background:#62d9bc;color:#103d35;font-size:15px;border-radius:14px;box-shadow:none}
+html .dsb-ov{background:radial-gradient(ellipse at 50% 0,color-mix(in srgb,var(--pri) 8%,var(--bg)),var(--bg) 75%)}html .dsb-card{background:var(--c);border:1px solid var(--ln);border-radius:24px;padding:28px;box-shadow:0 20px 80px #102d3b0d;gap:16px}html .dsb-card::before{content:"D";display:grid;place-items:center;width:48px;height:48px;border-radius:15px;background:var(--pri);color:var(--onp);font-size:27px;font-weight:800;margin-bottom:8px}html .dsb-t{font-size:25px;font-weight:800;letter-spacing:-1px}html .dsb-s{font-size:12px;line-height:1.7}html .dsb-card input{border-radius:11px;background:var(--tr);font-size:16px;min-height:50px}html .dsb-b1{background:var(--pri);color:var(--onp);border:0;border-radius:12px;min-height:50px}html .dsb-b2{border-radius:12px}html .dsb-e:empty{display:none}
+@media(min-width:860px){main{padding:30px 40px 56px}.appbar{margin-bottom:32px}.top h2{font-size:32px}.sg{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.st.hero{grid-column:1/-1;min-height:164px;display:flex;flex-direction:column;justify-content:center}.sg .st:last-child:not(.hero){grid-column:auto;display:block}.sg .st:last-child:not(.hero) span{margin-bottom:10px}.sg .st:last-child:not(.hero) b{text-align:left;font-size:22px}.sg .st:last-child:not(.hero) b em{display:block;margin:5px 0 0}.qa{gap:14px}.qa button,.qa button:nth-child(n){flex-direction:row;min-height:70px;gap:12px;font-size:13px}.qa svg{width:25px;height:25px}.overview-lower{display:grid;grid-template-columns:1.2fr 1fr;gap:16px;align-items:start}.box{padding:24px}.bars{height:175px}.st b{font-size:22px}}
+@media(max-width:370px){main{padding-left:14px;padding-right:14px}.st{padding:13px}.st b{font-size:16px}.box{padding:16px}.hd .tl{gap:6px}.hd .b1,.hd .b2{padding:9px 12px}nav.b button{font-size:7px}.top h2{font-size:24px}}
+@media(max-width:600px){dialog{border-radius:24px 24px 0 0;padding:16px 20px calc(22px + env(safe-area-inset-bottom,0px))}.dsb-ov .dsb-card{padding:24px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+html[data-theme=dark] .st.hero{background:linear-gradient(115deg,#163c4b,#145955);border-color:transparent}
+@media(prefers-color-scheme:dark){html:not([data-theme=light]) .st.hero{background:linear-gradient(115deg,#163c4b,#145955);border-color:transparent}}
+html body #dsb-out,html body #dsb-badge{left:auto;right:68px;top:calc(env(safe-area-inset-top,0px) + 25px);width:28px;height:28px;background:var(--c);border:1px solid var(--ln);opacity:1}
+@media(min-width:860px){html body #dsb-out,html body #dsb-badge{right:92px;top:35px}}
+@media print{.appbar{display:none}.st.hero{background:#fff;color:#111}.st.hero b,.st.hero span,.st.hero .in{color:#111}body{background:#fff}}
+
 </style>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="icon-192.png">
+<script>
+</script>
 <script src="config.js"></script>
-<script src="sync.js"></script>
-<script src="pwa.js" defer></script>
+<script>
+/* Oddiy login/parol (server kerak emas). Faqat Supabase ulanmagan bo'lsa va config.js da LOCAL_LOGIN bo'lsa ishlaydi.
+   Eslatma: bu faqat ekranni qulflaydi. Haqiqiy himoya va qurilmalar orasida sinxronlash uchun Supabase kerak. */
+(function () {
+  var C = window.DOKON_CONFIG || {}, L = C.LOCAL_LOGIN;
+  var sb = /^https:\/\/.+/.test(String(C.SUPABASE_URL || "")) && C.SUPABASE_ANON_KEY && !/YOUR|XXXX/i.test(String(C.SUPABASE_URL) + String(C.SUPABASE_ANON_KEY));
+  if (sb || !L || !L.hash || !L.salt) return;
+  var AK = "dokon-local-auth", DAYS = C.LOCAL_LOGIN_DAYS || 30, ITER = 150000;
+  var d = document, root = d.documentElement, fails = 0, until = 0;
+  function $(i) { return d.getElementById(i); }
+  function mount(el) { (d.body || root).appendChild(el); }
+  function ready(fn) { d.readyState === "loading" ? d.addEventListener("DOMContentLoaded", fn) : fn(); }
+  function isIn() {
+    try { var t = +localStorage.getItem(AK); return !!t && Date.now() - t < DAYS * 864e5 && localStorage.getItem(AK + "-h") === L.hash; } catch (e) { return false; }
+  }
+  async function derive(login, pw) {
+    var enc = new TextEncoder();
+    var key = await crypto.subtle.importKey("raw", enc.encode(login.toLowerCase() + "\u0000" + pw), "PBKDF2", false, ["deriveBits"]);
+    var bits = await crypto.subtle.deriveBits({ name: "PBKDF2", hash: "SHA-256", salt: enc.encode(L.salt), iterations: ITER }, key, 256);
+    return Array.from(new Uint8Array(bits)).map(function (b) { return b.toString(16).padStart(2, "0"); }).join("");
+  }
+  var css = d.createElement("style");
+  css.textContent =
+    "html.dsb-lock #app{visibility:hidden}" +
+    ".dsb-ov{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:20px;background:var(--bg,#111);color:var(--ink,#fff);font:500 15px/1.5 var(--fb,system-ui,sans-serif)}" +
+    ".dsb-card{width:min(380px,100%);display:flex;flex-direction:column;gap:12px}" +
+    ".dsb-t{font:700 26px/1.1 var(--fd,system-ui);letter-spacing:-.03em}.dsb-s{color:var(--mut,#999);font-size:14px}" +
+    ".dsb-card label{display:flex;flex-direction:column;gap:6px;font-weight:700;font-size:13px}" +
+    ".dsb-card input{font:500 16px var(--fb,system-ui);padding:13px 14px;border:1.5px solid var(--ln2,#444);border-radius:14px;background:var(--c,#222);color:var(--ink,#fff);outline:0}" +
+    ".dsb-card input:focus{border-color:var(--ink,#fff)}.dsb-e{min-height:20px;color:var(--r,#e5483c);font-size:13.5px;font-weight:600}" +
+    ".dsb-b1{font:800 15px var(--fb,system-ui);padding:14px;border-radius:16px;cursor:pointer;border:1.5px solid var(--sa,#fff);background:var(--sa,#fff);color:var(--sai,#111)}.dsb-b1:disabled{opacity:.5}" +
+    "#dsb-out{position:fixed;z-index:50;top:calc(env(safe-area-inset-top,0px) + 3px);left:3px;width:26px;height:26px;padding:0;border-radius:50%;border:1px solid var(--ln2,#444);background:var(--c,#222);color:var(--ink,#fff);font-size:12px;line-height:1;cursor:pointer;opacity:.9}";
+  d.head.appendChild(css);
+  root.classList.add("dsb-lock");
+
+  function badge() {
+    if ($("dsb-out")) return;
+    var b = d.createElement("button"); b.id = "dsb-out"; b.type = "button"; b.textContent = "\uD83D\uDD12"; b.setAttribute("aria-label", "Chiqish");
+    b.onclick = function () {
+      if (!confirm("Tizimdan chiqasizmi? Ma\u2019lumotlar o\u2019chmaydi.")) return;
+      try { localStorage.removeItem(AK); localStorage.removeItem(AK + "-h"); } catch (e) {}
+      location.reload();
+    };
+    mount(b);
+  }
+  function open() { root.classList.remove("dsb-lock"); ready(badge); }
+  if (isIn()) { open(); return; }
+
+  var o = d.createElement("div"); o.className = "dsb-ov";
+  o.innerHTML = '<form class="dsb-card"><div class="dsb-t">Do\u2019kon hisobi</div><div class="dsb-s">Davom etish uchun login va parolni kiriting.</div>' +
+    '<label>Login<input name="u" autocomplete="username" autocapitalize="none" autocorrect="off" required></label>' +
+    '<label>Parol<input name="p" type="password" autocomplete="current-password" required></label>' +
+    '<div class="dsb-e" role="alert"></div><button class="dsb-b1">Kirish</button></form>';
+  var f = o.querySelector("form"), e = o.querySelector(".dsb-e"), btn = o.querySelector("button");
+  f.onsubmit = async function (ev) {
+    ev.preventDefault();
+    var wait = Math.ceil((until - Date.now()) / 1000);
+    if (wait > 0) { e.textContent = wait + " soniyadan keyin qayta urinib ko\u2019ring."; return; }
+    if (!(window.crypto && crypto.subtle)) { e.textContent = "Bu sahifa HTTPS orqali ochilishi kerak."; return; }
+    btn.disabled = true; e.textContent = "";
+    try {
+      var h = await derive(f.u.value.trim(), f.p.value);
+      if (h === L.hash) {
+        try { localStorage.setItem(AK, String(Date.now())); localStorage.setItem(AK + "-h", L.hash); } catch (x) {}
+        o.remove(); open(); return;
+      }
+      fails++; e.textContent = "Login yoki parol noto\u2019g\u2019ri.";
+      if (fails >= 5) { until = Date.now() + 30000; fails = 0; e.textContent = "Ko\u2019p xato urinish. 30 soniya kuting."; }
+    } catch (x) { e.textContent = "Xatolik: brauzer qo\u2019llab-quvvatlamaydi."; }
+    btn.disabled = false;
+  };
+  mount(o);
+})();
+
+</script>
+<script>
+/* Do'kon hisobi — bulutga saqlash (Supabase) + login.
+   Ilovaning o'z kodi o'zgarmagan: bu fayl localStorage'ga yozuvlarni kuzatib, serverga yuboradi. */
+(function () {
+  "use strict";
+  var C = window.DOKON_CONFIG || {};
+  var BASE = String(C.SUPABASE_URL || "").replace(/\/+$/, ""), KEY = String(C.SUPABASE_ANON_KEY || "");
+  if (!/^https:\/\/.+/.test(BASE) || !KEY || /YOUR|XXXX/i.test(BASE + KEY)) { // sozlanmagan
+    if (C.REQUIRE_LOGIN !== false && !(C.LOCAL_LOGIN && C.LOCAL_LOGIN.hash)) { // login majburiy: ilovani yopib qo'yamiz
+      var st = document.createElement("style");
+      st.textContent = "html.dsb-lock #app{visibility:hidden}.dsb-ov{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:24px;text-align:center;background:var(--bg,#111);color:var(--ink,#fff);font:600 15px/1.5 var(--fb,system-ui,sans-serif)}";
+      document.head.appendChild(st);
+      document.documentElement.classList.add("dsb-lock");
+      var bx = document.createElement("div"); bx.className = "dsb-ov";
+      bx.textContent = "Server sozlanmagan. config.js fayliga Supabase URL va kalitini kiriting (README.md, 1–2 qadam).";
+      (document.body || document.documentElement).appendChild(bx);
+    }
+    return;
+  }
+  var ls;
+  try { ls = window.localStorage; ls.getItem("x"); } catch (e) { return; }
+
+  var DK = "dokon-pro-v1", SK = "dokon-sb-session", MK = "dokon-sb-meta";
+  var oSet = Storage.prototype.setItem, oDel = Storage.prototype.removeItem;
+  function jget(k) { try { return JSON.parse(ls.getItem(k)); } catch (e) { return null; } }
+  function jput(k, v) { try { oSet.call(ls, k, JSON.stringify(v)); } catch (e) {} }
+  function $(i) { return document.getElementById(i); }
+  function ready(fn) { document.readyState === "loading" ? document.addEventListener("DOMContentLoaded", fn) : fn(); }
+  function mount(el) { (document.body || document.documentElement).appendChild(el); }
+
+  var sess = jget(SK);
+  if (sess && !(sess.at && sess.uid)) sess = null;
+  var meta = jget(MK) || { v: null, dirty: false, uid: null, del: false };
+  var lastStr = null, pushing = false, again = false, timer = null, remoteNew = false, status = "wait", started = false;
+  function saveMeta() { jput(MK, meta); }
+
+  /* ---------- localStorage kuzatuvi ---------- */
+  Storage.prototype.setItem = function (k, v) {
+    var r = oSet.apply(this, arguments);
+    try {
+      if (this === ls && k === DK && sess && String(v) !== lastStr) {
+        meta.dirty = true; meta.del = false; saveMeta(); setStatus("wait"); sched(2000);
+      }
+    } catch (e) {}
+    return r;
+  };
+  Storage.prototype.removeItem = function (k) {
+    var r = oDel.apply(this, arguments);
+    try {
+      if (this === ls && k === DK && sess) { meta.dirty = true; meta.del = true; lastStr = null; saveMeta(); setStatus("wait"); sched(2000); }
+    } catch (e) {}
+    return r;
+  };
+  function sched(ms) { clearTimeout(timer); timer = setTimeout(function () { push(); }, ms); }
+
+  /* ---------- tarmoq ---------- */
+  function req(path, o) {
+    o = o || {};
+    var h = { apikey: KEY, "Content-Type": "application/json" };
+    if (o.headers) for (var k in o.headers) h[k] = o.headers[k];
+    h.Authorization = "Bearer " + (o.anon || !sess ? KEY : sess.at);
+    var ctl = window.AbortController && !o.keepalive ? new AbortController() : null;
+    var tm = ctl ? setTimeout(function () { ctl.abort(); }, 15000) : 0;
+    return fetch(BASE + path, { method: o.method || "GET", headers: h, body: o.body, keepalive: !!o.keepalive, signal: ctl ? ctl.signal : undefined })
+      .finally(function () { clearTimeout(tm); });
+  }
+  function setSess(j) {
+    var u = j.user || {}, old = sess || {};
+    sess = { at: j.access_token, rt: j.refresh_token, exp: j.expires_at || Math.floor(Date.now() / 1000) + (j.expires_in || 3600), uid: u.id || old.uid, email: u.email || old.email };
+    jput(SK, sess);
+  }
+  async function refresh() {
+    var r = await req("/auth/v1/token?grant_type=refresh_token", { method: "POST", anon: true, body: JSON.stringify({ refresh_token: sess.rt }) });
+    if (!r.ok) { if (r.status >= 500) throw new Error("srv"); return false; }
+    setSess(await r.json()); return true;
+  }
+  function expired() {
+    sess = null; try { oDel.call(ls, SK); } catch (e) {}
+    showLogin("Sessiya tugadi. Qayta kiring."); throw new Error("expired");
+  }
+  async function api(path, o, retried) {
+    o = o || {};
+    if (!sess) throw new Error("expired");
+    if (!o.anon && sess.exp - 60 < Date.now() / 1000) { if ((await refresh()) === false) return expired(); }
+    var r = await req(path, o);
+    if (r.status === 401 && !retried) { var ok = await refresh(); if (ok) return api(path, o, true); return expired(); }
+    return r;
+  }
+  async function getRemote() {
+    var r = await api("/rest/v1/dokon_data?select=data,version&user_id=eq." + sess.uid);
+    if (!r.ok) throw new Error("get " + r.status);
+    var a = await r.json(); return a[0] || null;
+  }
+
+  /* ---------- sinxronlash ---------- */
+  function applyRemote(rem) {
+    var s = JSON.stringify(rem.data == null ? {} : rem.data);
+    oSet.call(ls, DK, s); lastStr = s;
+    meta = { v: rem.version, dirty: false, uid: sess.uid, del: false }; saveMeta(); remoteNew = false;
+  }
+  async function pushOnce(ka) {
+    var str = ls.getItem(DK), data, r;
+    if (str == null) { if (!meta.del) { meta.dirty = false; saveMeta(); return "none"; } data = {}; }
+    else data = JSON.parse(str);
+    if (meta.v == null) {
+      r = await api("/rest/v1/dokon_data", { method: "POST", headers: { Prefer: "return=representation" }, body: JSON.stringify({ user_id: sess.uid, data: data }), keepalive: ka });
+      if (r.status === 409) return "conflict";
+    } else {
+      r = await api("/rest/v1/dokon_data?user_id=eq." + sess.uid + "&version=eq." + meta.v, { method: "PATCH", headers: { Prefer: "return=representation" }, body: JSON.stringify({ data: data }), keepalive: ka });
+    }
+    if (!r.ok) throw new Error("push " + r.status);
+    var a = await r.json(); if (!a.length) return "conflict";
+    meta.v = a[0].version; meta.uid = sess.uid; lastStr = str;
+    meta.dirty = ls.getItem(DK) !== str; if (!meta.dirty) meta.del = false;
+    saveMeta(); remoteNew = false; setStatus(meta.dirty ? "wait" : "ok");
+    return "ok";
+  }
+  async function push(ka) {
+    if (!sess) return;
+    if (pushing) { again = true; return; }
+    pushing = true; var res;
+    try { res = await pushOnce(ka); } catch (e) { res = "err"; } finally { pushing = false; }
+    if (res === "conflict") return conflict();
+    if (res === "err") { setStatus("off"); sched(20000); }
+    else if (again || meta.dirty) { again = false; sched(1500); }
+  }
+  async function conflict() {
+    var useSrv = confirm("Diqqat: ma'lumot boshqa qurilmada ham o'zgartirilgan.\n\nOK — serverdagi ma'lumotni olish\nBekor qilish — shu qurilmadagini serverga yozish");
+    try {
+      var rem = await getRemote();
+      if (!rem) { meta.v = null; saveMeta(); await push(); return false; }
+      if (useSrv) { applyRemote(rem); location.reload(); return true; }
+      meta.v = rem.version; meta.uid = sess.uid; meta.dirty = true; saveMeta(); await push(); return false;
+    } catch (e) { setStatus("off"); return false; }
+  }
+  async function initialSync() {
+    var reload = false;
+    if (meta.uid && meta.uid !== sess.uid) { // boshqa akkaunt ma'lumoti — tozalaymiz
+      oDel.call(ls, DK); meta = { v: null, dirty: false, uid: null, del: false }; saveMeta(); reload = true;
+    }
+    var rem = await getRemote(), local = ls.getItem(DK), same = meta.uid === sess.uid;
+    if (!rem) {
+      meta.v = null; meta.uid = sess.uid;
+      if (local) { meta.dirty = true; saveMeta(); await push(); } else saveMeta();
+      return reload;
+    }
+    if (!local && !meta.del) { applyRemote(rem); return true; }
+    if (same && !meta.dirty) {
+      if (meta.v === rem.version) { lastStr = local; return reload; }
+      applyRemote(rem); return true;
+    }
+    if (same && meta.dirty && meta.v === rem.version) { await push(); return reload; }
+    return conflict();
+  }
+  async function check() {
+    if (!sess || pushing) return;
+    try {
+      if (meta.dirty) { await push(); return; }
+      var r = await api("/rest/v1/dokon_data?select=version&user_id=eq." + sess.uid);
+      if (!r.ok) throw new Error("chk");
+      var a = await r.json(), v = a[0] ? a[0].version : null;
+      if (v != null && v !== meta.v) { remoteNew = true; setStatus("new"); } else { remoteNew = false; setStatus("ok"); }
+    } catch (e) { setStatus("off"); }
+  }
+
+  /* ---------- interfeys ---------- */
+  var css = document.createElement("style");
+  css.textContent =
+    "html.dsb-lock #app{visibility:hidden}" +
+    ".dsb-ov{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:20px;background:var(--bg,#111);color:var(--ink,#fff);font:500 15px/1.5 var(--fb,system-ui,sans-serif)}" +
+    ".dsb-card{width:min(380px,100%);display:flex;flex-direction:column;gap:12px}" +
+    ".dsb-t{font:700 26px/1.1 var(--fd,system-ui);letter-spacing:-.03em}.dsb-s{color:var(--mut,#999);font-size:14px}" +
+    ".dsb-card label{display:flex;flex-direction:column;gap:6px;font-weight:700;font-size:13px}" +
+    ".dsb-card input{font:500 16px var(--fb,system-ui);padding:13px 14px;border:1.5px solid var(--ln2,#444);border-radius:14px;background:var(--c,#222);color:var(--ink,#fff);outline:0}" +
+    ".dsb-card input:focus{border-color:var(--ink,#fff)}.dsb-e{min-height:20px;color:var(--r,#e5483c);font-size:13.5px;font-weight:600}" +
+    ".dsb-b1,.dsb-b2{font:800 15px var(--fb,system-ui);padding:14px;border-radius:16px;cursor:pointer;border:1.5px solid var(--sa,#fff)}" +
+    ".dsb-b1{background:var(--sa,#fff);color:var(--sai,#111)}.dsb-b2{background:none;color:var(--ink,#fff);border-color:var(--ln2,#444)}" +
+    ".dsb-b1:disabled,.dsb-b2:disabled{opacity:.5}" +
+    "#dsb-badge{position:fixed;z-index:50;top:calc(env(safe-area-inset-top,0px) + 3px);left:3px;width:26px;height:26px;padding:0;border-radius:50%;border:1px solid var(--ln2,#444);background:var(--c,#222);color:var(--ink,#fff);font-size:13px;line-height:1;cursor:pointer;opacity:.9}" +
+    "#dsb-panel{position:fixed;z-index:60;top:calc(env(safe-area-inset-top,0px) + 36px);left:8px;width:min(290px,calc(100vw - 16px));display:flex;flex-direction:column;gap:10px;padding:14px;border-radius:18px;border:1px solid var(--ln2,#444);background:var(--c,#222);color:var(--ink,#fff);font:500 14px/1.45 var(--fb,system-ui);box-shadow:0 20px 40px -12px rgba(0,0,0,.5)}" +
+    "#dsb-panel small{color:var(--mut,#999)}";
+  document.head.appendChild(css);
+
+  function uz(m) {
+    m = String(m || "");
+    if (/invalid login/i.test(m)) return "Email yoki parol noto'g'ri.";
+    if (/already registered|already been registered/i.test(m)) return "Bu email allaqachon ro'yxatdan o'tgan. «Kirish» tugmasini bosing.";
+    if (/at least 6|weak/i.test(m)) return "Parol kamida 6 ta belgidan iborat bo'lsin.";
+    if (/not confirmed/i.test(m)) return "Email tasdiqlanmagan. Pochtangizni tekshiring.";
+    if (/signups? (not allowed|.*disabled)|disabled/i.test(m)) return "Yangi foydalanuvchi qo'shish o'chirilgan.";
+    if (/rate limit/i.test(m)) return "Juda ko'p urinish. Birozdan keyin qayta urinib ko'ring.";
+    if (/failed to fetch|network|abort/i.test(m)) return "Internet yo'q yoki server javob bermayapti.";
+    return m || "Xatolik yuz berdi.";
+  }
+  async function doAuth(kind, f, ov) {
+    var e = ov.querySelector(".dsb-e"), bs = ov.querySelectorAll("button");
+    e.textContent = ""; bs.forEach(function (b) { b.disabled = true; });
+    try {
+      var res = await authReq(kind, f.email.value.trim(), f.pw.value);
+      if (res === "confirm") { e.textContent = "Emailingizga tasdiqlash xati yuborildi. Tasdiqlab, keyin «Kirish» ni bosing."; }
+      else { ov.remove(); start(); return; }
+    } catch (x) { e.textContent = uz(x.message); }
+    bs.forEach(function (b) { b.disabled = false; });
+  }
+  async function authReq(kind, email, pw) {
+    var r = await req(kind === "up" ? "/auth/v1/signup" : "/auth/v1/token?grant_type=password", { method: "POST", anon: true, body: JSON.stringify({ email: email, password: pw }) });
+    var j = {}; try { j = await r.json(); } catch (e) {}
+    if (!r.ok) throw new Error(j.msg || j.error_description || j.message || ("Xato " + r.status));
+    if (!j.access_token) return "confirm";
+    setSess(j); return "ok";
+  }
+  function showLogin(msg) {
+    hideCover(); document.documentElement.classList.add("dsb-lock"); var old = $("dsb-login"); if (old) old.remove();
+    var o = document.createElement("div"); o.id = "dsb-login"; o.className = "dsb-ov";
+    o.innerHTML = '<form class="dsb-card"><div class="dsb-t">Do\u2019kon hisobi</div><div class="dsb-s">Hisobingizga kiring: ma\u2019lumotlar bulutda saqlanadi va barcha qurilmalarda bir xil bo\u2019ladi.</div>' +
+      '<label>Email<input name="email" type="email" autocomplete="username" required></label>' +
+      '<label>Parol<input name="pw" type="password" autocomplete="current-password" minlength="6" required></label>' +
+      '<div class="dsb-e" role="alert"></div><button class="dsb-b1">Kirish</button><button type="button" class="dsb-b2">Ro\u2019yxatdan o\u2019tish</button></form>';
+    var f = o.querySelector("form");
+    o.querySelector(".dsb-e").textContent = msg || "";
+    f.onsubmit = function (ev) { ev.preventDefault(); doAuth("in", f, o); };
+    o.querySelector(".dsb-b2").onclick = function () { if (f.reportValidity()) doAuth("up", f, o); };
+    mount(o);
+  }
+  function showCover() {
+    document.documentElement.classList.add("dsb-lock");
+    if ($("dsb-cover")) return;
+    var c = document.createElement("div"); c.id = "dsb-cover"; c.className = "dsb-ov"; c.textContent = "Yuklanmoqda\u2026"; mount(c);
+  }
+  function hideCover() { var c = $("dsb-cover"); if (c) c.remove(); }
+
+  var ICON = { ok: "\u2601", wait: "\u23F3", off: "\u26A0", "new": "\uD83D\uDD14" };
+  var TXT = { ok: "Hammasi bulutga saqlangan.", wait: "Saqlanmoqda\u2026", off: "Aloqa yo\u2019q. Ma\u2019lumot shu qurilmada saqlanadi, aloqa tiklanganda yuboriladi.", "new": "Boshqa qurilmada yangi ma\u2019lumot bor." };
+  function setStatus(s) { status = s; var b = $("dsb-badge"); if (b) b.textContent = ICON[s] || ""; var t = $("dsb-st"); if (t) t.textContent = TXT[s] || ""; }
+  function mountBadge() {
+    if ($("dsb-badge")) return;
+    var b = document.createElement("button"); b.id = "dsb-badge"; b.type = "button"; b.setAttribute("aria-label", "Sinxronlash holati");
+    b.onclick = togglePanel; mount(b); setStatus(status);
+  }
+  function togglePanel() {
+    var p = $("dsb-panel"); if (p) { p.remove(); return; }
+    p = document.createElement("div"); p.id = "dsb-panel";
+    p.innerHTML = '<div><b></b><small id="dsb-st"></small></div><button type="button" class="dsb-b1" data-k="sync"></button><button type="button" class="dsb-b2" data-k="out">Chiqish</button><button type="button" class="dsb-b2" data-k="x">Yopish</button>';
+    p.querySelector("b").textContent = sess ? sess.email : "";
+    p.querySelector("[data-k=sync]").textContent = remoteNew ? "Yangilash (sahifa qayta yuklanadi)" : "Hozir sinxronlash";
+    p.onclick = async function (e) {
+      var k = e.target.dataset && e.target.dataset.k; if (!k) return;
+      if (k === "x") { p.remove(); return; }
+      if (k === "out") { p.remove(); logout(); return; }
+      if (k === "sync") {
+        try {
+          if (meta.dirty) { await push(); }
+          else if (remoteNew) { var rem = await getRemote(); if (rem) { applyRemote(rem); location.reload(); } }
+          else await check();
+        } catch (x) { setStatus("off"); }
+        p.remove();
+      }
+    };
+    mount(p); setStatus(status);
+  }
+  async function logout() {
+    if (meta.dirty) { try { await push(); } catch (e) {} }
+    var msg = meta.dirty ? "DIQQAT: saqlanmagan o\u2019zgarishlar bor (aloqa yo\u2019q)! Chiqsangiz ular yo\u2019qoladi. Baribir chiqasizmi?"
+      : "Chiqsangiz, bu qurilmadagi nusxa o\u2019chadi (serverda saqlanib qoladi). Davom etasizmi?";
+    if (!confirm(msg)) return;
+    try { await req("/auth/v1/logout", { method: "POST" }); } catch (e) {}
+    try { oDel.call(ls, DK); oDel.call(ls, SK); oDel.call(ls, MK); } catch (e) {}
+    sess = null; location.reload();
+  }
+
+  /* ---------- ishga tushirish ---------- */
+  async function start() {
+    if (!sess) { showLogin(); return; }
+    showCover();
+    var rl = false;
+    try { rl = await initialSync(); setStatus(meta.dirty ? "wait" : "ok"); }
+    catch (e) { if (e && e.message === "expired") return; setStatus("off"); lastStr = meta.dirty ? null : ls.getItem(DK); }
+    if (rl) { location.reload(); return; }
+    hideCover(); document.documentElement.classList.remove("dsb-lock"); ready(mountBadge);
+    if (!started) {
+      started = true;
+      setInterval(check, 30000);
+      window.addEventListener("online", check);
+      window.addEventListener("pagehide", function () { if (meta.dirty && sess) push(true); });
+      document.addEventListener("visibilitychange", function () { if (document.hidden) { if (meta.dirty && sess) push(true); } else check(); });
+    }
+  }
+  start();
+})();
+
+</script>
 </head>
 <body>
 <div id="app"><noscript>Dastur ishlashi uchun JavaScript yoqilgan bo'lishi kerak.</noscript></div>
@@ -436,10 +829,10 @@ function FIRST(){return`<div class="box"><h3>Boshlash uchun 3 qadam</h3><button 
 function home(){var t=rep(TD,TD),m=rep(TD.slice(0,8)+"01",TD),iv=D.p.reduce(function(s,p){return s+p.q*p.c},0),days=[],mx=1;
 for(var i=6;i>=0;i--){var d=dy(i),r=rep(d,d);days.push([d,r.rev]);mx=Math.max(mx,r.rev)}
 var al=D.p.filter(function(p){return p.q<=p.m||(p.q>0&&p.e&&dd(p.e)<=7)}).map(function(p){return`<div class="rw iv"><div class="nm">${av(p.n)}<div>${E(p.n)}<small>${p.q<=p.m?`<b class="lo">Qoldiq ${Q(p.q)} ${p.u}</b> `:""}${eb(p)}</small></div></div><div class="r"><button class="b3" data-a="buy" data-i="${p.id}">Kirim</button>${p.e&&dd(p.e)<0&&p.q>0?`<button class="b3" data-a="loss" data-i="${p.id}">Chiqarish</button>`:""}</div></div>`}).join("");
-return`<div class="top"><h2>${E(D.sh)}</h2><p class="sub">${fd()}</p></div>
+return`<div class="top"><span class="eyebrow">Umumiy ko'rinish</span><h2>${E(D.sh)}</h2><p class="sub">${fd()}</p></div>
 ${(!D.bk||dd(D.bk)<-7)&&D.l.length?`<div class="box"><div class="rw" style="border:0;padding:0"><div><b class="wa">Zaxira nusxa olinmagan</b><small>Ma'lumot faqat shu qurilmada saqlanadi.</small></div><button class="b3" data-a="bk">Nusxa olish</button></div></div>`:""}${QA()}${!D.p.length&&!D.l.length?FIRST():""}<div class="sg">${st("Shu oy sof foydasi",M(m.np),m.np>=0?"in":"out",1)}${st("Bugungi savdo",M(t.rev))}${st("Bugungi sof foyda",M(t.np),t.np>=0?"in":"out")}${st("Mijozlar qarzi",M(sum(D.cd)))}${st("Ta'minotchiga qarz",M(sum(D.sd)))}${st("Ombor qiymati (tannarx)",M(iv))}</div>
-<div class="box"><h3>Oxirgi 7 kun savdosi</h3><div class="bars" style="margin-top:12px">${days.map(function(x){return`<div class="bar" title="${M(x[1])}"><div class="bc"><i style="height:${Math.round(x[1]/mx*100)}%"></i></div><small>${x[0].slice(8)}</small></div>`}).join("")}</div></div>
-<div class="box"><h3>Diqqat talab qiladi</h3>${al||'<div class="em">Hammasi joyida: qoldiq va muddatlar yaxshi.</div>'}</div>`}
+<div class="overview-lower"><div class="box"><h3>Oxirgi 7 kun savdosi</h3><div class="bars" style="margin-top:12px">${days.map(function(x){return`<div class="bar" title="${M(x[1])}"><div class="bc"><i style="height:${Math.round(x[1]/mx*100)}%"></i></div><small>${x[0].slice(8)}</small></div>`}).join("")}</div></div>
+<div class="box"><h3>Diqqat talab qiladi</h3>${al||'<div class="em">Hammasi joyida: qoldiq va muddatlar yaxshi.</div>'}</div></div>`}
 var PM="day";
 function rt(){if(D.rt>0)return D.rt;var a=0,b=0;D.p.forEach(function(p){if(p.s>0){a+=p.c;b+=p.s}});return b?Math.round(a/b*100):80}
 function dtt(){["dc","dk"].forEach(function(k){var v=+$(k).value||0,h=$("h_"+k);if(h)h.textContent=v>0?M(v):""});$("dt").textContent=M((+$("dc").value||0)+(+$("dk").value||0))}
@@ -532,7 +925,7 @@ var VW={home:home,pos:pos,inv:inv,exp:xp,debt:debt,rp:rp,set:set};
 function wel(){$("app").innerHTML=`<div class="wel"><div class="mk" aria-hidden="true">D</div><h1>Do'kon hisobi</h1><p>Oziq-ovqat do'koni uchun to'liq hisob-kitob: har kuni foydangizni aniq ko'ring.</p><ul><li>Kassa: kun oxirida jami tushumni yozing, mahsulot bo'yicha yozish shart emas</li><li>Ombor: qoldiq, yaroqlilik muddati, hisobdan chiqarish</li><li>Xarajat, qarzlar va sof foyda hisoboti</li></ul><button class="b1" data-a="blank">Boshlash</button></div>`}
 var DBG="";
 function render(){var BG=D&&D.bg,H=document.documentElement;if(BG){H.style.setProperty("--bgimg",'url("'+BG+'")');H.classList.add("hasbg")}else H.classList.remove("hasbg");if(!D)return wel();var y=window.scrollY,same=render.v===V,qv=$("iq")?$("iq").value:"";render.v=V;
-$("app").innerHTML=`<aside><div class="br"><i class="lg" aria-hidden="true">${E(D.sh.charAt(0).toUpperCase())}</i><span>${E(D.sh)}<small>Hisob-kitob</small></span></div>${nb()}</aside><main id="v"${same?"":" class=\"anim\""}>${thb()}${VW[V]()}</main><nav class="b" aria-label="Bo'limlar">${nb()}</nav>`;
+$("app").innerHTML=`<aside><div class="br"><i class="lg" aria-hidden="true">${E(D.sh.charAt(0).toUpperCase())}</i><span>${E(D.sh)}<small>Hisob-kitob</small></span></div>${nb()}</aside><main id="v"${same?"":" class=\"anim\""}><header class="appbar"><div class="appbrand"><span class="brandmark">${ic("inv")}</span><span>Do'kon hisobi<small>Biznesingiz nazoratda</small></span></div>${thb()}</header>${VW[V]()}</main><nav class="b" aria-label="Bo'limlar">${nb()}</nav>`;
 if(V==="debt"&&DA)dl();if(V==="pos"&&PM==="item"){pl();cr()}if(V==="inv"){if(same&&$("iq"))$("iq").value=qv;il()}if(same)window.scrollTo(0,y)}
 function ret(id){var s=D.l.filter(function(x){return x.id===id})[0];if(!s||!confirm("Sotuv bekor qilinsinmi? Mahsulot omborga qaytariladi."))return;
 s.items.forEach(function(it){var p=D.p.filter(function(x){return it.i?x.id===it.i:x.n===it.n})[0];if(p)p.q=Q(p.q+it.q)});
