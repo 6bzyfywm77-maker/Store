@@ -444,6 +444,9 @@ aside{background:linear-gradient(180deg,#0b1230,#0a1a4a)}
 .cbar{background:linear-gradient(180deg,#f8c552,#f1a928);color:#2a1c00;border-radius:22px}
 .tot{background:var(--p1);border-radius:18px}
 dialog{border-radius:28px}dialog::backdrop{background:rgba(8,14,40,.55)}
+
+/* faqat oq rejim */
+html{color-scheme:light!important}.thr,.thb{display:none!important}
 </style>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="favicon.ico">
@@ -468,6 +471,7 @@ dialog{border-radius:28px}dialog::backdrop{background:rgba(8,14,40,.55)}
 })();
 
 </script>
+<script>/* Faqat oq rejim */(function(){var r=document.documentElement;function f(){if(r.getAttribute("data-theme")!=="light")r.setAttribute("data-theme","light")}f();new MutationObserver(f).observe(r,{attributes:true,attributeFilter:["data-theme"]})})();</script>
 <script src="config.js"></script>
 <script>window.DOKON_CONFIG=window.DOKON_CONFIG||{REQUIRE_LOGIN:false};</script>
 <script>
